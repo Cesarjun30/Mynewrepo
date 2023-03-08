@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@200;400;800&display=swap');
+
+
+/*Custom Properties*/
+:root{ --Darkblue:#0B0742;
+       --Softblue:#120C6E;
+       --gradient:#4053bd; 
+       --Lightblue:#5E72EB; 
+       --Redoranged:#FF9190; 
+       --Beighe:#FDC094; 
+       --darkgray:#333;
+       --white:#fff; 
+       --yellowgold:#f5c400;    } /*If you want to use other customs*/
+
+*{margin: 0;}
+html {box-sizing: border-box; font-size: 62.5%; font-family:'DM Sans' ;}
+
+*,*::before, *::after{ box-sizing: inherit;}
+
+h1, h2, h3 {font-family: 'Manrope', Verdana, Geneva, Tahoma; font-weight: 800;  }
+p {font-family: 'DM Sans';}
+a {text-decoration: none;}
+
+
+/* here starts the header */
+
+header.header {
+        background-image: linear-gradient(to right, var(--Darkblue), var(--gradient)) ;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+      
+        
+    
+    }
+
+    /*topmenu styles */
+
+header.header .top {
+        width: 100%;
+        display: flex;
+        padding: 2rem 7rem;
+        align-items: center;
+       
+        
+    }
+
+header.header img {margin-right: 4rem;}
+
+header.header .top .menu {display: flex;
+        justify-content: space-between; 
+        width: 100%;   
+        align-items: center;
+        }
+
+nav ul {list-style-type: none; overflow: hidden;} 
+
+nav ul li {float: left;}
+
+
+nav li a, .dropdown-button{
+    color:#fff;
+    margin: 2rem 2rem; 
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    display: block; 
+    
+    
+}
+
+.menu-side1 {width: 25%;
+    float: left;
+
+}
+.menu-side2 { width: 25%;
+    float: left;
+
+}
+
+.menu-side3 { width: 25%;
+    float: left;
+    
+}
+.menu-side4 { width: 25%;
+    float: left;
+    
+}
+
+[class="content1"] a {
+    padding: 0;
+    margin: 0 0 0 3rem;
+    display: inline-block;
+    line-height: 1; 
+    color: var(--darkgray);
+     }
+
+.dropdown-content .menu-side1  h2 {margin: 4rem 0 4rem 7rem; color: var(--Beighe); font-size: 2rem;}
+.dropdown-content .menu-side2  h2 {margin: 1rem 0 4rem 7rem; color:#8905e0; font-size: 2rem;}
+.dropdown-content .menu-side3  h2 {margin: 4rem 0 4rem 7rem; color:#cd5308; font-size: 2rem;}
+.dropdown-content .menu-side4  h2 {margin: 4rem 0 4rem 0; color:#cd5308; font-size: 2rem;}
+.dropdown-content .menu-side2 {margin-top: 11rem;}
+.dropdown-content .menu-side4 .box-content {
+    position: relative;
+    width: 270px;
+    border-radius: 2rem; 
+    background:linear-gradient( to right, var(--Darkblue) 65%,  var(--Lightblue)) ; 
+    overflow: hidden;}
+
+    .box-content .box-bg{position: absolute; 
+    top:20px;
+    left:150px;
+}
+.dropdown-content .menu-side4 .box-content .in-side{width: 50%;}
+.dropdown-content .menu-side4 .box-content h2 {
+    margin: 0 0 0 1.8rem; 
+    padding: 0; 
+    font-size: 2rem; 
+    color: var(--white);
+}
+
+.dropdown-content .menu-side4 .box-content p {
+    color: #5E72EB; 
+    display: inline-block; 
+    margin: 5rem 0 0 1.8rem;
+    font-size: 1.2rem;
+
+}
+
+.dropdown-content .menu-side4 .box-content button {
+    margin: 4rem 0 4rem 1.8rem; 
+    padding: 1rem 1.5rem; 
+    border-radius: 1rem; 
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+/*box menu-button hover effect*/
+.dropdown-content .menu-side4 .box-content button:hover {background: #222; color: white;}
+
+
+.content1{margin: 1rem 0 0 7rem;}
+.content1::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content1 .menu-content {float: left; margin: 0 0 1.5rem 0;}
+.content1 .menu-content p {
+    margin: 0 0 0 3rem; 
+    line-height: 2; 
+    font-size: 1.3rem; 
+    color:#777; 
+    font-size: 1.5rem;
+}
+
+.content1 .menu-img {float: left;}
+.menu-side2  {margin-top:7rem ;} 
+
+
+nav ul li.dropdown {display: inline-block;}
+
+nav ul li .dropdown-content  {
+    display: none;
+    transition: display 2s;
+    position: absolute; 
+    background: var(--white);
+    width:100%;
+    top:9rem;
+    right:0rem ;
+    height: 400px;  
+    z-index: 1;   
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    
+}
+
+
+
+/*header.header .top .menu nav ul li a {
+    color:#fff;
+    margin: 2rem 2rem; 
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    display: block;
+    
+}*/
+
+/*.dropdown-content a {
+    color: black;
+      
+  }*/
+
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* here ends Dropdown Menu*/
+
+.top-btn {
+    display: flex;
+    align-items: center;
+}
+
+.menu .top-btn .signin-btn { 
+        padding: 1rem 1.5rem;
+        color: #000;
+        font-family: 'DM Sans';
+        font-weight: 500;
+        border: none; 
+        border-radius: .7rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-right: .8rem;
+        transition: .2s;
+    }
+
+    .menu .top-btn .signup-btn { 
+        padding: 1rem 1.5rem;
+        color:#fff;
+        font-family: 'DM Sans';
+        font-weight: 500;
+        border: none; 
+        border-radius: .7rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: var(--Softblue);
+        transition: .2s;
+    }
+
+/*top btns hover effect*/
+
+.menu .top-btn .signup-btn:hover,
+.menu .top-btn .signin-btn:hover {
+     background: var(--Darkblue) ;
+     color:#fff;
+}
+
+/*Hero Area*/
+
+header.header .hero {
+    width: 100%;
+    }
+
+header.header .hero .hero-content {
+     display: flex;
+     flex-direction: column;
+     padding: 0 18rem;
+             
+        }
+
+.hero-title {
+    color: #fff; 
+    font-size: 7.5rem;
+    margin-top: 11rem;
+    margin-bottom: 3.5rem;
+    line-height: 1;
+
+}
+
+.hero-par { 
+    line-height: 1.5; 
+    color: #fff; 
+    font-size: 1.5rem; margin-bottom: 5rem;  width: 70%;}
+
+.herobtns {
+    display: flex;
+    padding-bottom: 7rem; 
+         
+}
+.hero-btn1 {
+    padding: 1.5rem 3.5rem;
+    color: #000;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    border: none; 
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: .8rem;
+    border: 1px solid  transparent;
+    transition: .2s;
+}
+
+.hero-btn2 {
+    padding: 1.5rem 3.5rem;
+    color: #fff;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    border:1px solid #fff; 
+    border-radius: .7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: .8rem;
+    background: none;
+    margin-left:2rem ;
+    transition: .2s;
+}
+
+.hero-btn1:hover  { background: var(--Beighe); }
+.hero-btn2:hover { 
+    background: var(--Beighe); 
+    border: none; 
+    color: #000;}
+
+.video-content {display: flex;
+justify-content: center;
+}
+
+.video {border-radius: .3rem;
+border: 2px solid rgba(255, 255, 255, .6); margin: 0 0 5rem 0 ;}
+
+/*here ends the header*/
+
+/*brans section*/
+
+.brands {display: flex;
+       font-size: 1.4rem;
+       text-align: center;
+       flex-direction: column;
+       margin-bottom: 10rem;
+       font-weight: 500;
+}
+
+.brands-content {display: flex;
+text-align: center;
+margin: 7rem 0 3.5rem 0;
+justify-content: center; }
+
+.brands-content p {color:var(--darkgray) ; margin: 0 .5rem; }
+.brands-content a {margin: 0 .5rem; color:var(--darkgray); font-weight: 700;}
+.brands-content .stars {margin: 0 .5rem;}
+.brands-content .stars i {color: var(--yellowgold); }
+
+/*hover effect rating link */
+.brands-content a:hover {color: var(--Lightblue);}
+
+.brands .brand-logos { display: flex; justify-content: center;}
+.brands .brand-logos img {margin: 0 1.85rem;}
+
+/*here ands brand content*/
+
+/*here start intro-content*/
+
+.intro {display: flex;
+flex-direction: column;
+padding: 0 7rem;
+}
+
+.intro h1 { margin-top:4rem; text-align: center ;
+font-size: 3.5rem;
+}
+
+.intro-content {display: flex; justify-content: space-around;}
+.intro-content .intro-side {display: flex; flex-direction: column; padding: 5rem;}
+.intro-content .intro-side h3 {font-size: 2.8rem;  margin:2rem 0; font-weight: 800;}
+.intro-content .intro-side p {color: #777; font-size: 1.5rem; line-height: 1.5; width:80% ;}
+.intro-content .intro-side .intro-side-content a {
+    padding:.8rem 1.5rem; 
+    display:inline-block ; color:var(--Lightblue); 
+    font-size: 1.3rem; 
+    font-weight: 800; 
+    margin:.5em -1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    
+    
+}
+.intro-content .intro-side .intro-side-content a:hover {
+     background:#222; 
+     color: white; 
+     padding:.8rem 1.5rem;
+     border-radius: 2rem;}
+.intro-content img {margin: 5rem 10rem 5rem 0; }
+
+.intro-content .intro-side h3 a {
+    line-height: 1.7; 
+    margin: 2rem 0; 
+    color: #ccc; 
+    font-size: 2.8rem;}
+
+.intro-content .intro-side h3 a:hover {color: var(--darkgray);}
+
+
